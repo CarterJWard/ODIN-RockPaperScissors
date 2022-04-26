@@ -6,7 +6,6 @@ let maxRounds = 5;
 const computerSelection = () => {
     let options = ['rock', 'paper', 'scissors']
     let selection = Math.floor(Math.random() * (2 - 0 + 1) + 0)
-    console.log(options[selection])
     return options[selection];
 }
 
@@ -57,7 +56,7 @@ const tiedGame = () => {
 const updateScoreboard = () => {
     document.getElementById('playerPoint').innerHTML = 'Player Score: ' +playerScore
     document.getElementById('computerPoint').innerHTML = 'Computer Score: ' + cScore
-    document.getElementById('roundCount').innerHTML = 'Round: '+round
+    document.getElementById('roundCount').innerHTML = 'Round: '+round+'/'+maxRounds
 }
 
 const game = () => {
