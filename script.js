@@ -1,6 +1,7 @@
 const computerSelection = () => {
     let options = ['rock', 'paper', 'scissors']
     let selection = Math.floor(Math.random() * (2 - 0 + 1) + 0)
+    console.log(options[selection])
     return options[selection];
 }
 
@@ -9,7 +10,7 @@ const playRound = (player, computer) => {
         tiedGame()
     } else {
         if (player == 'rock') {
-            if (computer = 'paper') {
+            if (computer == 'paper') {
                 loseGame(player, computer)
             } else {
                 winGame(player, computer)
@@ -45,6 +46,7 @@ const tiedGame = () => {
 }
 
 const game = () => {
-    let playerSelection
+    let playerSelection = prompt('enter your choice')
+    console.log(playerSelection + ' player')
     playRound(playerSelection, computerSelection())
 }
